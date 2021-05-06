@@ -4,13 +4,33 @@ import GlobalStyle from "./components/GlobalStyle";
  //import pages
  import AboutUs from "./pages/AboutUs";
  import Nav from './components/Nav';
-function App() {
+ import ContactUs from './pages/ContactUs';
+ import Paintings from './pages/Paintings';
+
+ //router
+
+ import {Switch, Route} from 'react-router-dom';
+
+
+ function App() {
   return (
-    <div className="App">
-      <Nav/>
-      <AboutUs/>
-      <GlobalStyle/>
-    </div>
+ <div className="App">
+     <GlobalStyle/>
+       <Nav />
+    <Switch>
+      
+         <Route path = "/" exact>
+             <AboutUs/>
+        </Route>
+         
+        <Route path = "/contact">
+           <ContactUs />
+       </Route>
+       <Route path ="/Paintings">
+           <Paintings />
+       </Route>
+     </Switch>
+ </div>
   );
 }
 
