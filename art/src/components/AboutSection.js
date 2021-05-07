@@ -5,6 +5,7 @@ import {About, Description, Image, Hide} from '../styles';
 // framer motion
 
 import {motion} from 'framer-motion';
+import Wave from '../components/wave';
 
 
 const AboutSection = () => {
@@ -36,6 +37,7 @@ const AboutSection = () => {
            <Image>
                <img src={logo} alt=""/>
            </Image>
+           <Wave />
         </About>
      );
 }

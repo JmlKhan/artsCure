@@ -60,6 +60,9 @@ import { About, Description, Image } from "../styles";
      
  }
  const Services = styled(About)`
+   @media (max-width: 1300px){
+     width: 100%;  
+    }
   h2{
       padding-bottom: 5rem;
 

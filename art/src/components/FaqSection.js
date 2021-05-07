@@ -1,18 +1,39 @@
 import React from "react";
 import styled from "styled-components";
 import { About } from "../styles";
+import Toggle from './Togle';
+import { AnimateSharedLayout } from 'framer-motion';
 
 
 const FaqSection = () => {
+
+
+
     return (
         <Faq>
             <h2>
                 Any Question <span>FAQ</span>
             </h2>
-            <div className="question">
-                <h4>
-                    How Do I Start?
-                </h4>
+            <AnimateSharedLayout>
+            <Toggle title= "How Can I Buy Painthings">
+                
+                    
+                     <div className="answer">
+                         <p>Lorem ipsum dolor sit amet.</p>
+                  
+                          <p>
+                            Lorem ipsum dolor sit amet 
+                            consectetur adipisicing elit. Rem, porro.
+                          </p>
+                  
+                     </div>
+                            
+                    
+               
+                </Toggle>
+            <Toggle title = "Picture quality ?">
+            
+            
                 <div className="answer">
                     <p>Lorem ipsum dolor sit amet.</p>
                     <p>
@@ -21,12 +42,9 @@ const FaqSection = () => {
                     </p>
 
                 </div>
-            <div className="faq-line"></div>
-            </div>
-            <div className="question">
-                <h4>
-                    Picture quality ?
-                </h4>
+                
+             </Toggle>
+             <Toggle title = "Can I purchase a painting?">
                 <div className="answer">
                     <p>Lorem ipsum dolor sit amet.</p>
                     <p>
@@ -35,12 +53,12 @@ const FaqSection = () => {
                     </p>
 
                 </div>
-                <div className="faq-line"></div>
-            </div>
-            <div className="question">
-                <h4>
-                    Can I purchase a painting?
-                </h4>
+                
+            
+            </Toggle>
+            <Toggle title ="Can you ship paintings to overseas?">
+            
+                
                 <div className="answer">
                     <p>Lorem ipsum dolor sit amet.</p>
                     <p>
@@ -49,21 +67,9 @@ const FaqSection = () => {
                     </p>
 
                 </div>
-                <div className="faq-line"></div>
-            </div>
-            <div className="question">
-                <h4>
-                    Can you ship paintings to overseas?
-                </h4>
-                <div className="answer">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <p>
-                        Lorem ipsum dolor sit amet 
-                        consectetur adipisicing elit. Rem, porro.
-                    </p>
-
-                </div>
-            </div>
+            
+            </Toggle>
+            </AnimateSharedLayout>
         </Faq>
       );
 }
@@ -84,6 +90,7 @@ h2{
     margin: 2rem 0rem;
     width: 100%;
 }
+
 .question{
     padding:3rem 0rem;
     cursor: pointer;

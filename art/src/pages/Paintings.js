@@ -101,7 +101,7 @@ const Paintings = () => {
      display: grid;
      grid-template-columns: 1fr 1fr;
      gap: 20px;
-     border: 2px solid lightcoral;
+    // border: 2px solid lightcoral;
      margin: 20px;
      h1{
          text-align: center;
@@ -121,7 +121,7 @@ const Paintings = () => {
 // mobile 
 @media screen and (max-width: 860px){
    .paint{ 
-    border: none;
+    
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
